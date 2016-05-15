@@ -72,8 +72,8 @@
 
 	    init: function() { 
 
-	        document.querySelector(data.src).addEventListener(this.data.show, this.show.bind(this));
-	        document.querySelector(data.src).addEventListener(this.data.hide, this.hide.bind(this));
+	        document.querySelector(this.data.src).addEventListener(this.data.show, this.show.bind(this));
+	        document.querySelector(this.data.src).addEventListener(this.data.hide, this.hide.bind(this));
 
 	        this.cameraEl = document.querySelector('a-entity[camera]');
 
