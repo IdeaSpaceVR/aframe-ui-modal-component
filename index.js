@@ -1,5 +1,5 @@
 /**
- * UI Modal component for A-Frame.
+ * UI modal component for A-Frame.
  */
 
 if (typeof AFRAME === 'undefined') {
