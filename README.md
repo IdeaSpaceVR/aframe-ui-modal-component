@@ -38,3 +38,7 @@ Install and use by directly including the [browser files](dist):
   </a-scene>
 </body>
 ```
+
+### Example
+
+http://ideaspacevr.github.io/aframe-ui-modal-component
