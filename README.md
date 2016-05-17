@@ -39,7 +39,7 @@ Install and use by directly including the [browser files](dist):
 </body>
 ```
 
-### Example
+### Examples
 
 - http://ideaspacevr.github.io/aframe-ui-modal-component
 - https://www.ideaspacevr.org/themes/web-vr-photo-sphere-viewer-navigation-menu
