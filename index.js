@@ -10,7 +10,7 @@ AFRAME.registerComponent('ui-modal', {
 
     schema: {
         src: {
-            type: 'selector',
+            type: 'src',
             default: ''
         },
         show: {

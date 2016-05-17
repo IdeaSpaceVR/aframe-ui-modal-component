@@ -56,7 +56,7 @@
 
 	    schema: {
 	        src: {
-	            type: 'selector',
+	            type: 'src',
 	            default: ''
 	        },
 	        show: {
