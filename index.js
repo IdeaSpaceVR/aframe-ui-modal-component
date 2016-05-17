@@ -19,7 +19,7 @@ AFRAME.registerComponent('ui-modal', {
 
     init: function() { 
 
-        window.addEventListener(this.data.trigger, this.eventHandler.bind(this));
+        document.querySelector('a-scene').addEventListener(this.data.trigger, this.eventHandler.bind(this));
 
         this.cameraEl = document.querySelector('a-entity[camera]');
 
