@@ -26,9 +26,10 @@ AFRAME.registerComponent('ui-modal', {
 
     init: function() { 
 
+console.log(this.data.src);
         document.querySelector(this.data.src).addEventListener(this.data.show, this.show.bind(this));
         document.querySelector(this.data.src).addEventListener(this.data.hide, this.hide.bind(this));
-console.log(this.data.src);
+
         this.cameraEl = document.querySelector('a-entity[camera]');
 
         this.yaxis = new THREE.Vector3(0, 1, 0);
