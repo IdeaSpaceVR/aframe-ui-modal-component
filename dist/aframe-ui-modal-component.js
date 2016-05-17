@@ -55,14 +55,7 @@
 	AFRAME.registerComponent('ui-modal', {
 
 	    schema: {
-	        src: {
-	            type: 'src',
-	            default: ''
-	        },
-	        show: {
-	            default: 'click'
-	        },
-	        hide: {
+	        trigger: {
 	            default: 'click'
 	        },
 	        zpos: {
@@ -72,9 +65,8 @@
 
 	    init: function() { 
 
-	        document.querySelector(this.data.src).addEventListener(this.data.show, this.show.bind(this));
-	        document.querySelector(this.data.src).addEventListener(this.data.hide, this.hide.bind(this));
-	console.log(this.data.src);
+	        window.addEventListener(this.data.trigger, this.eventHandler.bind(this));
+
 	        this.cameraEl = document.querySelector('a-entity[camera]');
 
 	        this.yaxis = new THREE.Vector3(0, 1, 0);
@@ -88,7 +80,7 @@
 
 	    },
 
-	    show: function(evt) {
+	    eventHandler: function(evt) {
 
 	        if (this.el.getAttribute('visible') === false) {
 
@@ -103,19 +95,12 @@
 
 	            this.el.setAttribute('visible', true);
 
+	        } else if (this.el.getAttribute('visible') === true) {
+
+	            this.el.setAttribute('visible', false);
 	        }
 
 	    },
-	   
-	    hide: function(evt) {
-
-	        if (this.el.getAttribute('visible') === true) {
-
-	            this.el.setAttribute('visible', false);
-
-	        }
-
-	    }, 
 
 	    update: function (oldData) {},
 

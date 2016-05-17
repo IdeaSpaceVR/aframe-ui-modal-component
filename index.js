@@ -9,14 +9,7 @@ if (typeof AFRAME === 'undefined') {
 AFRAME.registerComponent('ui-modal', {
 
     schema: {
-        src: {
-            type: 'src',
-            default: ''
-        },
-        show: {
-            default: 'click'
-        },
-        hide: {
+        trigger: {
             default: 'click'
         },
         zpos: {
@@ -26,9 +19,7 @@ AFRAME.registerComponent('ui-modal', {
 
     init: function() { 
 
-console.log(this.data.src);
-        document.querySelector(this.data.src).addEventListener(this.data.show, this.show.bind(this));
-        document.querySelector(this.data.src).addEventListener(this.data.hide, this.hide.bind(this));
+        window.addEventListener(this.data.trigger, this.eventHandler.bind(this));
 
         this.cameraEl = document.querySelector('a-entity[camera]');
 
@@ -43,7 +34,7 @@ console.log(this.data.src);
 
     },
 
-    show: function(evt) {
+    eventHandler: function(evt) {
 
         if (this.el.getAttribute('visible') === false) {
 
@@ -58,19 +49,12 @@ console.log(this.data.src);
 
             this.el.setAttribute('visible', true);
 
+        } else if (this.el.getAttribute('visible') === true) {
+
+            this.el.setAttribute('visible', false);
         }
 
     },
-   
-    hide: function(evt) {
-
-        if (this.el.getAttribute('visible') === true) {
-
-            this.el.setAttribute('visible', false);
-
-        }
-
-    }, 
 
     update: function (oldData) {},
 
