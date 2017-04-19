@@ -4,10 +4,11 @@ Create a modal dialog or floating menu in A-Frame.
 
 ### Properties
 
-| Property | Description                                                                               | Default Value |
-| --------- | -----------                                                                               | ------------- |
-| trigger   | Event to make dialog or menu visible.                                                     | `click`        |
-| zpos    | Position the dialog or menu on the z-axis. In meters.                                       | -4             |
+| Property         | Description                                                                               | Default Value |
+| ---------------- | -----------                                                                               | ------------- |
+| trigger          | Event to make dialog or menu visible.                                                     | `click`       |
+| triggerElement   | Element to which the trigger event listener will be applied.                              | `a-scene`     |
+| zpos             | Position the dialog or menu on the z-axis. In meters.                                     | -4            |
 
 ### Usage
 
