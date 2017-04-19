@@ -1,6 +1,6 @@
 {
   "name": "aframe-ui-modal-component",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Create a modal dialog or floating menu in A-Frame.",
   "main": "index.js",
   "directories": {
@@ -30,6 +30,6 @@
   },
   "homepage": "https://github.com/IdeaSpaceVR/aframe-ui-modal-component#readme",
   "devDependencies": {
-    "aframe": "^0.2.0"
+    "aframe": "^0.5.0"
   }
 }

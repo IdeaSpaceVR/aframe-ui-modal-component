@@ -58,6 +58,9 @@
 	        trigger: {
 	            default: 'click'
 	        },
+	        triggerElement: {
+	          default: 'a-scene',
+	        },
 	        zpos: {
 	            default: -4
 	        }
@@ -65,7 +68,7 @@
 
 	    init: function() { 
 
-	        document.querySelector('a-scene').addEventListener(this.data.trigger, this.eventHandler.bind(this));
+	        document.querySelector(this.data.triggerElement).addEventListener(this.data.trigger, this.eventHandler.bind(this));
 
 	        this.cameraEl = document.querySelector('a-entity[camera]');
 
