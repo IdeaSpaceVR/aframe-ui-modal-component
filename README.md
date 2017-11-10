@@ -43,4 +43,4 @@ Install and use by directly including the [browser files](dist):
 ### Examples
 
 - http://ideaspacevr.github.io/aframe-ui-modal-component
-- https://www.ideaspacevr.org/themes/web-vr-photo-sphere-viewer-navigation-menu
+- https://www.ideaspacevr.org/themes/ideaspace-360
